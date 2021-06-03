@@ -7,6 +7,8 @@ const categories = [
 ];
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
+const mockContactSelected = jest.fn();
+const mockSetContactSelected = jest.fn();
 
 describe("Nav component", () => {
   //baseline test
@@ -16,6 +18,8 @@ describe("Nav component", () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
   });
@@ -35,6 +39,8 @@ describe("emoji is visable", () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
 
@@ -49,6 +55,8 @@ describe("links are visible", () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
     expect(getByTestId("link")).toHaveTextContent("Oh Snap!");
